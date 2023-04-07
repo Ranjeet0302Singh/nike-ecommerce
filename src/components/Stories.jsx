@@ -1,6 +1,6 @@
 import React from "react";
 import Title from "./utils/Title";
-import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import { AiFillHeart, AiFillClockCircle, FaSlackHash } from "react-icons/all";
 import { truncate } from "lodash";
