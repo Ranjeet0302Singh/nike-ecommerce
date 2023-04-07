@@ -1,13 +1,29 @@
 import React from "react";
 import { AiFillStar, BsFillBagHeartFill } from "react-icons/all";
-const Item = ({ id, color, shadow, title, text, img, rating, price, btn }) => {
-  console.log(color);
+const Item = ({
+    ifExists,
+  id,
+  color,
+  shadow,
+  title,
+  text,
+  img,
+  rating,
+  price,
+  btn,
+}) => {
   return (
     <>
       <div
-        className={` relative bg-gradient-to-b ${color} ${shadow} grid items-center justify-items-center rounded-xl py-4 px-5 transition-all duration-700 ease-in-out w-full hover:scale-105`}
+        className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center ${
+            ifExists ? "justify-items-start" : "justify-items-center"
+        } rounded-xl py-4 px-5 transition-all duration-700 ease-in-out w-full hover:scale-105`}
       >
-        <div className=" grid items-center justify-item-center">
+        <div
+          className={`grid items-center ${
+            ifExists ? "justify-items-start" : "justify-items-center"
+          }`}
+        >
           <h1 className=" text-slate-200 text-xl lg:text-lg md:text-base font-medium filter drop-shadow ">
             {title}
           </h1>
@@ -41,11 +57,19 @@ const Item = ({ id, color, shadow, title, text, img, rating, price, btn }) => {
           </div>
         </div>
 
-        <div className=" flex items-center">
+        <div
+          className={`flex items-center ${
+            ifExists ? "absolute top-5 right-1" : "justify-center"
+          }`}
+        >
           <img
             src={img}
-            alt="img/item-img"
-            className=" h-36 w-64 transitions-theme hover:-rotate-12 "
+            alt={`img/item-img/${id}`}
+            className={`transitions-theme hover:-rotate-12 ${
+                ifExists
+                ? "h-auto w-64 lg:w-56 md:w-48 -rotate-[35deg]"
+                : "h-36 w-64"
+            }`}
           />
         </div>
       </div>
