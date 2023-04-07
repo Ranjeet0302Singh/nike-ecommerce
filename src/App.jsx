@@ -1,6 +1,6 @@
 import React from 'react'
-import { FlexContent, Hero, Sales } from './components'
-import {heroapi, popularsales,topratesales,highlight,sneaker} from './data/data'
+import { FlexContent, Hero, Sales, Stories } from './components'
+import {heroapi, popularsales,topratesales,highlight,sneaker, story} from './data/data'
 import './App.css'
 const App = () => {
   return (
@@ -11,6 +11,7 @@ const App = () => {
         <FlexContent endpoint={highlight} ifExists/>
         <Sales endpoint={topratesales}/>
         <FlexContent endpoint={sneaker}/>
+        <Stories story={story}/>
       </main>
     </div>
   )
