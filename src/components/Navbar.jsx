@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectTotalQTY, setOpenCart } from '../app/CartSlice.js';
+import { selectTotalQTY, setOpenCart } from '../app/Cartslice';
 
 import { HeartIcon, MagnifyingGlassIcon, ShoppingBagIcon } from '@heroicons/react/24/outline'
 import logo from '../assets/logo.png';

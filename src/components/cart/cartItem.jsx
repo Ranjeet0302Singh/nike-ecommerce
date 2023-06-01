@@ -1,8 +1,7 @@
 import React from "react";
 import { MinusIcon, PlusIcon, TrashIcon } from "@heroicons/react/24/outline";
 import { useDispatch } from "react-redux";
-import { setRemoveItemFromCart } from "../../app/Cartslice";
-import { setDecreaseItemQTY, setIncreaseItemQTY } from "../../app/CartSlice";
+import { setRemoveItemFromCart,setDecreaseItemQTY, setIncreaseItemQTY } from "../../app/Cartslice";
 
 
 const CartItem = ({ item: { id, title, text, img, color, shadow, price, cartQuantity } }) => {
