@@ -2,12 +2,12 @@ import React from "react";
 import { BsChevronDoubleLeft } from "react-icons/bs";
 import { HiXMark } from "react-icons/hi2";
 
-const cartCount = () => {
+const cartCount = ({onCartToggle , onClearCartItems}) => {
   return (
     <>
       <div className="bg-white h-11 flex items-center justify-between px-3 sticky top-0 left-0 right-0 w-full">
         <div className=" flex items-center gap-3">
-            <div className=" grid items-center cursor-pointer">
+            <div className=" grid items-center cursor-pointer" onClick={onCartToggle}>
             <BsChevronDoubleLeft className=" w-5 h-5 text-slate-900 hover:text-orange-500 stroke-[2]"/>
 
             </div>
@@ -16,7 +16,7 @@ const cartCount = () => {
             </div>
         </div>
             <div className="flex items-center">
-                <button type="button" className=" rounded bg-theme-cart active:scale-90 p-0.5">
+                <button type="button" className=" rounded bg-theme-cart active:scale-90 p-0.5" onClick={onClearCartItems}>
                     <HiXMark className=" w-5 h-5 text-white stroke-[2]"/>
                 </button>
             </div>
